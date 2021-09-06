@@ -122,7 +122,33 @@ h4{
     z-index: 2;
     background: rgb(2,0,36);
     background: linear-gradient(339deg, rgba(2,0,36,1) 0%, rgba(62,221,16,1) 0%, rgba(13,232,207,1) 0%);
+    -webkit-transition: width 0.4s 0s ease-in-out;
+    -moz-transition: width 0.4s 0s ease-in-out;
+    -o-transition: width 0.4s 0s ease-in-out;
+    transition: width 0.5s 0s ease-in-out;
 }
+
+
+
+.buy img{
+    width: 30px;
+    display: none;
+}
+
+
+.buy:hover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.buy:hover img{
+    display: block;
+}
+
+
 
 .column-2{
     display: flex;
@@ -133,6 +159,7 @@ h4{
 .controller{
     width: 90%;
     z-index: 2;
+    animation: moveController 2s infinite alternate ease-in-out;
 }
 
 .color-box{
@@ -217,15 +244,25 @@ h4{
         top: 60px;
         left: 60px;
         overflow: hidden;
+        transition: all 0.8s ease-in-out;
     }
 
 
     .menu-icon{
         display: block;
+        cursor: pointer;
     }
 
     .nav-li{
         display: block;
         margin-top: 5px;
+    }
+}
+
+
+
+@keyframes moveController{
+    from {
+        transform: translate(-5%, -5%) rotate(-20deg);
     }
 }
