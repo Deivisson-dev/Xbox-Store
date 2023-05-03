@@ -58,8 +58,11 @@ li {
 
 
 .nav-link:hover{
-    color: #00edd2;
+    border-bottom: 2px solid #00edd2;
+    transition-delay: 0.1s;
 }
+
+
 
 .row{
     display: flex;
